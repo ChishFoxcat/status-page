@@ -1,12 +1,10 @@
 import { createStore } from 'vuex'
+import Global from './global'
+import Config from './config'
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    Global,
+    Config
   }
 })

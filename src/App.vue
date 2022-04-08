@@ -13,7 +13,22 @@ import { mapGetters } from "vuex";
 
 export default {
   watch: {
-    
+    siteTitle: {
+      handler() {
+        if (this.siteTitle == "") {
+          document.title = this.thisSite.site.name;
+        } else {
+          document.title = this.siteTitle + " - " + this.thisSite.site.name;
+        }
+      },
+      deep: true,
+      immediate: true,
+    },
+  },
+
+  computed: {
+    ...mapGetters("Global", ["siteTitle"]),
+    ...mapGetters("Config", ["thisSite"]),
   },
 
   components: {
