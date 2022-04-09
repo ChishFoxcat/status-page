@@ -5,6 +5,6 @@ export default [
         meta: {
             title: ""
         },
-        component: () => import("@/views/home"),
+        component: () => import("@/views/home/index"),
     }
 ]
