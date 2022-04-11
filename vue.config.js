@@ -1,5 +1,19 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-    dayjs = require('dayjs');
+    dayjs = require('dayjs'),
+    thisLink = (arr) => {
+        let link = ''
+        arr.forEach(v => {
+            link += '<link rel="'
+                + v.rel +
+                '" href="'
+                + v.href +
+                '" '
+                + (v.type !== undefined ? 'type="' + v.type + '"' : '')
+                + (v.sizes !== undefined ? 'sizes="' + v.sizes + '"' : '') +
+                '>'
+        })
+        return link
+    };
 
 module.exports = {
     chainWebpack: config => {
@@ -28,6 +42,13 @@ module.exports = {
                     keywords: process.env.VUE_APP_KEYWORDS,
                     "theme-color": process.env.VUE_APP_THEMECOLOR
                 }
+
+                val.options.link = thisLink([
+                    { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' },
+                    { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+                    { rel: 'dns-prefetch', href: 'https://cdn.bakaomg.cn' },
+                    { rel: 'stylesheet', href: 'https://cdn.bakaomg.cn/packages/mdi/font/6.5.95/css/materialdesignicons.min.css' },
+                ])
 
                 val.options.copyright =
                     '|   _____ _     _     _      _____ _        _             ' + "\n" +

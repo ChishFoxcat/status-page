@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style>
+@import "./assets/fonts/tencent/tencent.css";
+
 * {
   -webkit-tap-highlight-color: transparent;
 }

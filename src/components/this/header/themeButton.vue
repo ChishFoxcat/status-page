@@ -1,7 +1,7 @@
 <template>
   <div class="menu-bar-theme-button">
     <t-button shape="square" variant="text">
-        <t-icon name="fork"></t-icon>
+        <i class="white-balance-sunny"></i>
     </t-button>
   </div>
 </template>

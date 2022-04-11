@@ -2,10 +2,12 @@
   <header id="CHISH-STATUS-Header">
     <t-head-menu v-model="menu1Value" theme="light" class="header-menu-bar">
       <template #logo>
-        <HeaderLogo title="Server Status"></HeaderLogo>
+        <HeaderLogo title="ServerStatus"></HeaderLogo>
       </template>
 
-      <ThemeButton></ThemeButton>
+      <template #operations>
+        <ThemeButton></ThemeButton>
+      </template>
     </t-head-menu>
   </header>
 </template>
@@ -16,18 +18,28 @@ import ThemeButton from "@/components/this/header/themeButton";
 
 export default {
   data: () => ({
-    menu1Value: null
+    menu1Value: null,
   }),
 
   components: {
     HeaderLogo,
-    ThemeButton
-  }
+    ThemeButton,
+  },
 };
 </script>
 
 <style>
 #CHISH-STATUS-Header .header-menu-bar {
-  padding: 0 15px;
+  padding: 0 18px;
+}
+
+.header-menu-bar::after {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  border-bottom: 1px solid var(--td-border-level-1-color);
 }
 </style>

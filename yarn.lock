@@ -5836,6 +5836,11 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
+sortablejs@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.npmmirror.com/sortablejs/-/sortablejs-1.15.0.tgz#53230b8aa3502bb77a29e2005808ffdb4a5f7e2a"
+  integrity sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==
+
 source-list-map@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
@@ -6178,17 +6183,17 @@ tapable@^1.0.0, tapable@^1.1.3:
   resolved "https://registry.npmmirror.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
   integrity sha512-4WK/bYZmj8xLr+HUCODHGF1ZFzsYffasLUgEiMBY4fgtltdO6B4WJtlSbPaDTLpYTcGVwM2qLnFTICEcNxs3kA==
 
-tdesign-icons-vue-next@^0.0.7, tdesign-icons-vue-next@~0.0.7:
+tdesign-icons-vue-next@~0.0.7:
   version "0.0.7"
   resolved "https://registry.npmmirror.com/tdesign-icons-vue-next/-/tdesign-icons-vue-next-0.0.7.tgz#9125c01953c180e01fce5a00f773bddb083ee0c7"
   integrity sha512-Jf7mT9P65I6DpaQwDEVmcddhifcfjspPjW7VPfpWCnEbJJAru8uyeKOkrdiWjqtpfL9Z3VecvJ/QitbJqteKMQ==
   dependencies:
     "@babel/runtime" "^7.16.3"
 
-tdesign-vue-next@^0.11.2:
-  version "0.11.2"
-  resolved "https://registry.npmmirror.com/tdesign-vue-next/-/tdesign-vue-next-0.11.2.tgz#950d78c70af5ef30f39d90ef2db6f3805b31e95e"
-  integrity sha512-rFxZLmaehSHRYKs1nGLbKqUCVbMIi+Ck+gphAgTlW8y5a9jcgUdvVrX+i7xQlWPgzof2xnOr/Bnivl+MQsdo7Q==
+tdesign-vue-next@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.npmmirror.com/tdesign-vue-next/-/tdesign-vue-next-0.12.0.tgz#552d5bd70cfcfaa11e05d720023bb68e1a341f72"
+  integrity sha512-vim5hQMEwdfk1pjeHXZTqnq1omFXwJGUqW3B+psD7RK2qqBM5EYMfGkKTxd8moLCvNu4jpEyDvT5K7HlvKnSwA==
   dependencies:
     "@babel/runtime" "^7.14.8"
     "@popperjs/core" "^2.9.3"
@@ -6197,6 +6202,7 @@ tdesign-vue-next@^0.11.2:
     "@types/validator" "^13.6.3"
     dayjs "^1.9.7"
     lodash "^4.17.15"
+    sortablejs "^1.15.0"
     tdesign-icons-vue-next "~0.0.7"
     tinycolor2 "^1.4.2"
     validator "^13.5.1"
