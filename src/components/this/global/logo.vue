@@ -1,127 +1,90 @@
 <template>
-  <div
-    class="logo-icon"
-    :style="
-      'transform: scale(' +
-      (scale != null ? scale : 1) +
-      '); height:' +
-      (height != null ? height : 72) +
-      'px;width:' +
-      (width != null ? width : 72.5) +
-      'px;'
-    "
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 47.49 70"
   >
-    <div class="logo-s-top">
-      <div class="s-bottom"></div>
-      <div class="s-left-bottom"></div>
-    </div>
-    <div class="logo-s-center">
-      <div class="s-bottom">
-        <div class="s-bottom-left"></div>
-      </div>
-    </div>
-
-    <div class="logo-s-bottom"></div>
-  </div>
+    <defs>
+      <linearGradient
+        id="a"
+        data-name="未命名的渐变 52"
+        x1="-1.25"
+        y1="15"
+        x2="38.75"
+        y2="15"
+        gradientTransform="matrix(1, 0, -0.21, 1, 7.44, 0)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0.5" stop-color="#00c853" />
+        <stop offset="0.68" stop-color="#00d05c" />
+        <stop offset="0.98" stop-color="#00e474" />
+        <stop offset="1" stop-color="#00e676" />
+      </linearGradient>
+      <linearGradient
+        id="b"
+        data-name="未命名的渐变 33"
+        x1="7.68"
+        y1="35"
+        x2="39.81"
+        y2="35"
+        gradientTransform="matrix(1, 0, -0.43, 1, 14.88, 0)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stop-color="#ffc107" />
+        <stop offset="1" stop-color="#ff9800" />
+      </linearGradient>
+      <linearGradient
+        id="c"
+        data-name="未命名的渐变 57"
+        x1="38.75"
+        y1="60"
+        x2="38.75"
+        y2="40"
+        xlink:href="#a"
+      />
+      <linearGradient id="d" x1="14.25" y1="65" x2="46" y2="65" xlink:href="#b" />
+    </defs>
+    <path
+      class="a"
+      d="M45.19,0h-28A1.31,1.31,0,0,0,16,1l-1.91,9h-9a1.31,1.31,0,0,0-1.21,1L1.94,20,0,29a.79.79,0,0,0,.79,1h9l2.13-10h9a1.31,1.31,0,0,0,1.21-1l1.91-9h19a1.3,1.3,0,0,0,1.21-1L46,1A.78.78,0,0,0,45.19,0Z"
+      transform="translate(0)"
+    />
+    <path
+      class="b"
+      d="M37.68,40h-29a.78.78,0,0,1-.78-1l1.91-9h29a.79.79,0,0,1,.79,1Z"
+      transform="translate(0)"
+    />
+    <path
+      class="c"
+      d="M46.68,40h-9L35.56,50h-9a1.3,1.3,0,0,0-1.21,1l-1.92,9h19a1.31,1.31,0,0,0,1.22-1l3.82-18A.78.78,0,0,0,46.68,40Z"
+      transform="translate(0)"
+    />
+    <path
+      class="d"
+      d="M30.31,70h-28a.79.79,0,0,1-.79-1l1.7-8a1.31,1.31,0,0,1,1.21-1h29l-1.91,9A1.31,1.31,0,0,1,30.31,70Z"
+      transform="translate(0)"
+    />
+  </svg>
 </template>
 
 <script>
-export default {
-  props: {
-    scale: [Number, String],
-    width: [Number, String],
-    height: [Number, String],
-  },
-};
+export default {};
 </script>
 
 <style scoped>
-.logo-icon {
-  width: 72.5px;
-  height: 72px;
-  position: relative;
+.a {
+  fill: url(#a);
 }
 
-.logo-s-top {
-  width: 35px;
-  height: 10px;
-  background-color: #424242;
-  border-radius: 1px 1px 1px 0;
-  top: 0px;
-  left: -5px;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  transform: skewX(-12deg);
-  background-image: linear-gradient(90deg, #00c853 15%, #00e676);
+.b {
+  fill: url(#b);
 }
 
-.logo-s-top .s-bottom {
-  bottom: calc(-100% - 0px);
-  left: -10px;
-  position: absolute;
-  width: 20px;
-  height: 10px;
-  border-radius: 1px 0 1px 0;
-  background-image: linear-gradient(90deg, #00c853 60%, #69f0ae);
+.c {
+  fill: url(#c);
 }
 
-.logo-s-top .s-left-bottom {
-  bottom: calc(-100% - 10px);
-  left: -10px;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 0 0 0 1px;
-  background-color: #00c853;
-}
-
-.logo-s-center {
-  width: 40px;
-  height: 10px;
-  background-color: #424242;
-  border-radius: 0 1px 0 1px;
-  top: 30px;
-  left: -13px;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  transform: skewX(-12deg);
-  background-image: linear-gradient(90deg, #ffc107 15%, #ff9800);
-}
-
-.logo-s-center .s-bottom {
-  bottom: calc(-100% - 10px);
-  right: -10px;
-  position: absolute;
-  width: 10px;
-  height: 20px;
-  border-radius: 0 1px 1px 0;
-  background-image: linear-gradient(0deg, #00c853 60%, #69f0ae);
-}
-
-.s-bottom .s-bottom-left {
-  bottom: 0;
-  left: 0;
-  transform: translateX(-99%);
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 1px 0 0 0;
-  background-color: #00c853;
-}
-
-.logo-s-bottom {
-  width: 35px;
-  height: 10px;
-  background-color: #424242;
-  border-radius: 1px 0 1px 1px;
-  top: 60px;
-  left: -20.5px;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  transform: skewX(-12deg);
-  background-image: linear-gradient(90deg, #ffc107 15%, #ff9800);
+.d {
+  fill: url(#d);
 }
 </style>
