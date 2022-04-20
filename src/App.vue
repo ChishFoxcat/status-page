@@ -1,11 +1,13 @@
 <template>
   <Header />
+  <Drawer />
   <Main />
   <Footer />
 </template>
 
 <script>
 import Header from "@/views/Header";
+import Drawer from "@/views/Drawer";
 import Main from "@/views/Main";
 import Footer from "@/views/Footer";
 
@@ -33,6 +35,7 @@ export default {
 
   components: {
     Header,
+    Drawer,
     Main,
     Footer,
   },

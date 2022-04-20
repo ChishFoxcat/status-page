@@ -1,5 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
     dayjs = require('dayjs'),
+    path = require('path'),
+    resolve = dir => {
+        return path.join(__dirname, dir)
+    },
     thisLink = (arr) => {
         let link = ''
         arr.forEach(v => {
@@ -13,11 +17,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
                 '>'
         })
         return link
-    };
+    },
+    webpack = require('webpack');
 
 module.exports = {
     chainWebpack: config => {
         config.plugins.delete('prefetch')
+        config.module
+            .rule('svg')
+            .exclude.add(resolve('src/assets/icon'))
+            .end()
+        config.module
+            .rule('icons')
+            .test(/\.svg$/)
+            .include.add(resolve('src/assets/icon'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'CI-[name]'
+            })
+            .end()
     },
 
     configureWebpack: config => {

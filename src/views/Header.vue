@@ -1,7 +1,9 @@
 <template>
   <header id="CHISH-STATUS-Header">
     <t-head-menu v-model="menu1Value" theme="light" class="header-menu-bar">
+
       <template #logo>
+        <AppsButton></AppsButton>
         <HeaderLogo title="ServerStatus"></HeaderLogo>
       </template>
 
@@ -13,6 +15,7 @@
 </template>
 
 <script>
+import AppsButton from "@/components/this/header/appsButton";
 import HeaderLogo from "@/components/this/header/logo";
 import ThemeButton from "@/components/this/header/themeButton";
 
@@ -22,6 +25,7 @@ export default {
   }),
 
   components: {
+    AppsButton,
     HeaderLogo,
     ThemeButton,
   },

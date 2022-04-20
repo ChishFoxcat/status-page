@@ -7,8 +7,9 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "svg-sprite-loader": "^6.0.11",
     "tdesign-vue-next": "^0.12.0",
-    "vue": "^3.0.0",
+    "vue": "^3.2.32",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
@@ -16,7 +17,7 @@
     "@vue/cli-plugin-router": "~4.5.15",
     "@vue/cli-plugin-vuex": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.2.32"
   },
   "browserslist": [
     "> 1%",
